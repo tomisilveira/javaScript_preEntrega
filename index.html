@@ -149,7 +149,7 @@
 							</div>
 						</div> <!-- col-sm-4 -->
 					</div> <!-- row -->
-					
+
 				</div> <!-- services -->
 			</div> <!-- main_content -->
 		</div> <!-- container -->
@@ -171,46 +171,114 @@
 				<div class="services">
 					<div class="row">
 						<div class="col-sm-6">
-						  <div class="card">
-							<div class="card-body">
-							  <h5 class="card-title">Soldadura</h5>
-							  <p class="card-text">Curso de soldadura nivel 1.</p>
-							  <a href="#" class="btn btn-primary" id="curso_soldadura">Agregar</a>
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-title">Soldadura</h5>
+									<p class="card-text">Curso de soldadura nivel 1.</p>
+									<div>
+										<select class="form-select" id="day">
+											<option selected>Selecciona el día de inicio</option>
+											<option value="09-01">9 de Enero</option>
+											<option value="20-01">20 de Enero</option>
+											<option value="5-02">5 de Febrero</option>
+										</select>
+										<br>
+										<select class="form-select" id="turno">
+											<option selected>Selecciona el turno</option>
+											<option value="manana">Mañana</option>
+											<option value="tarde">Tarde</option>
+											<option value="noche">Noche</option>
+										</select>
+									</div>
+									<br>
+									<a href="#" class="btn btn-primary" id="curso_soldadura">Agregar</a>
+								</div>
 							</div>
-						  </div>
-						</div>
-						<div class="col-sm-6">
-						  <div class="card">
-							<div class="card-body">
-							  <h5 class="card-title">Durlock</h5>
-							  <p class="card-text">Curso de construcción en seco inicial.</p>
-							  <a href="#" class="btn btn-primary" id="curso_durlock">Agregra</a>
-							</div>
-						  </div>
 						</div>
 						<div class="col-sm-6">
 							<div class="card">
-							  <div class="card-body">
-								<h5 class="card-title">Electricidad</h5>
-								<p class="card-text">Curso de Electricidad domiciliaria.</p>
-								<a href="#" class="btn btn-primary" id="curso_electricidad">Agregar</a>
-							  </div>
+								<div class="card-body">
+									<h5 class="card-title">Durlock</h5>
+									<p class="card-text">Curso de construcción en seco inicial.</p>
+									<div>
+										<select class="form-select" id="day">
+											<option selected>Selecciona el día de inicio</option>
+											<option value="09-01">9 de Enero</option>
+											<option value="20-01">20 de Enero</option>
+											<option value="5-02">5 de Febrero</option>
+										</select>
+										<br>
+										<select class="form-select" id="turno">
+											<option selected>Selecciona el turno</option>
+											<option value="manana">Mañana</option>
+											<option value="tarde">Tarde</option>
+											<option value="noche">Noche</option>
+										</select>
+										
+									</div>
+									<br>
+									<a href="#" class="btn btn-primary" id="curso_durlock">Agregra</a>
+								</div>
 							</div>
-						  </div>
+						</div>
 						<div class="col-sm-6">
 							<div class="card">
-							  <div class="card-body">
-								<h5 class="card-title">Instalaciones agua</h5>
-								<p class="card-text">Curso inicial de instalación de agua.</p>
-								<a href="#" class="btn btn-primary" id="curso_instalacion">Agregar</a>
-							  </div>
+								<div class="card-body">
+									<h5 class="card-title">Electricidad</h5>
+									<p class="card-text">Curso de Electricidad domiciliaria.</p>
+									<div>
+										<select class="form-select" id="day">
+											<option selected>Selecciona el día de inicio</option>
+											<option value="09-01">9 de Enero</option>
+											<option value="20-01">20 de Enero</option>
+											<option value="5-02">5 de Febrero</option>
+										</select>
+										<br>
+										<select class="form-select" id="turno">
+											<option selected>Selecciona el turno</option>
+											<option value="manana">Mañana</option>
+											<option value="tarde">Tarde</option>
+											<option value="noche">Noche</option>
+										</select>
+									</div>
+									<br>
+									<a href="#" class="btn btn-primary" id="curso_electricidad">Agregar</a>
+								</div>
 							</div>
-						  </div>
-					  </div>
+						</div>
+						
+						<div class="col-sm-6">
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-title">Instalaciones agua</h5>
+									<p class="card-text">Curso inicial de instalación de agua.</p>
+									<div>
+										<select class="form-select" id="day">
+											<option selected>Selecciona el día de inicio</option>
+											<option value="09-01">9 de Enero</option>
+											<option value="20-01">20 de Enero</option>
+											<option value="5-02">5 de Febrero</option>
+										</select>
+										<br>
+										<select class="form-select" id="turno">
+											<option selected>Selecciona el turno</option>
+											<option value="manana">Mañana</option>
+											<option value="tarde">Tarde</option>
+											<option value="noche">Noche</option>
+										</select>
+									</div>
+									<br>
+									<a href="#" class="btn btn-primary" id="curso_instalacion">Agregar</a>
+								</div>
+							</div>
+						</div>
+						
+					</div>
 				</div> <!--  -->
+				<div class="noSeleccion"></div>
 			</div> <!-- main_content -->
 		</div> <!-- container -->
-	    <!-- Aquí mostramos los cursos que agrega -->
+		<!-- Aquí mostramos los cursos que agrega -->
 		<div id="carrito"></div>
 	</section> <!-- cursos -->
 
@@ -236,9 +304,10 @@
 						</div>
 						<h4 class="wow animated fadeInUp" data-wow-delay="0.2s">Juan Pablo Cordoba</h4>
 						<p class="member-title wow animated fadeIn" data-wow-delay="0.3s">Presidente</p>
-						<p class="team-member-description wow animated fadeIn" data-wow-delay="0.4s">Aquí debería ir algo.</p>
+						<p class="team-member-description wow animated fadeIn" data-wow-delay="0.4s">Aquí debería ir
+							algo.</p>
 						<div class="row text-center wow animated fadeInDown" data-wow-delay="0.5s">
-							
+
 						</div>
 					</div> <!-- col-md-4 -->
 					<div class="col-md-4 col-sm-6 text-center">
@@ -250,17 +319,20 @@
 						</div>
 						<h4 class="wow animated fadeInUp" data-wow-delay="0.7s">Gastón Contardi</h4>
 						<p class="member-title wow animated fadeIn" data-wow-delay="0.8s">Secretario General</p>
-						<p class="team-member-description wow animated fadeIn" data-wow-delay="0.9s">Aquí debería ir algo.</p>
+						<p class="team-member-description wow animated fadeIn" data-wow-delay="0.9s">Aquí debería ir
+							algo.</p>
 						<div class="row text-center wow animated fadeInDown" data-wow-delay="0.5s">
 							<div class="team-member-contact">
-								<a href="https://www.facebook.com/gastoncontardiNeuquen" data-toggle="tooltip" title="Contactar por Facebook" class="team-facebook">
+								<a href="https://www.facebook.com/gastoncontardiNeuquen" data-toggle="tooltip"
+									title="Contactar por Facebook" class="team-facebook">
 									<i class="fa fa-facebook"></i>
 								</a>
-								<a href="https://twitter.com/gaslcontardi" data-toggle="tooltip" title="Contactar por Twitter" class="team-twitter">
+								<a href="https://twitter.com/gaslcontardi" data-toggle="tooltip"
+									title="Contactar por Twitter" class="team-twitter">
 									<i class="fa fa-twitter"></i>
 								</a>
-								<a href="https://www.instagram.com/gastoncontardi/" data-toggle="tooltip" title="Contactar por Instagram"
-									class="team-instagram">
+								<a href="https://www.instagram.com/gastoncontardi/" data-toggle="tooltip"
+									title="Contactar por Instagram" class="team-instagram">
 									<i class="fa fa-instagram"></i>
 								</a>
 							</div>
@@ -275,14 +347,16 @@
 						</div>
 						<h4 class="wow animated fadeInUp" data-wow-delay="1.2s">Liliana Caporicci</h4>
 						<p class="member-title wow animated fadeIn" data-wow-delay="1.3s">Secretaría Académica</p>
-						<p class="team-member-description wow animated fadeIn" data-wow-delay="1.4s">Aquí debería ir algo.</p>
+						<p class="team-member-description wow animated fadeIn" data-wow-delay="1.4s">Aquí debería ir
+							algo.</p>
 						<div class="row text-center wow animated fadeInDown" data-wow-delay="0.5s">
 							<div class="team-member-contact">
-								<a href="https://www.facebook.com/liliana.caporicci" data-toggle="tooltip" title="Contactar por  Facebook" class="team-facebook">
+								<a href="https://www.facebook.com/liliana.caporicci" data-toggle="tooltip"
+									title="Contactar por  Facebook" class="team-facebook">
 									<i class="fa fa-facebook"></i>
 								</a>
-								<a href="https://www.instagram.com/lilianacaporicci/" data-toggle="tooltip" title="Contactar por Instagram"
-									class="team-instagram">
+								<a href="https://www.instagram.com/lilianacaporicci/" data-toggle="tooltip"
+									title="Contactar por Instagram" class="team-instagram">
 									<i class="fa fa-instagram"></i>
 								</a>
 							</div>
@@ -296,7 +370,7 @@
 
 
 
-	<!-- contact -->
+	<!-- contacto -->
 	<section id="contacto">
 		<div class="container">
 			<div class="row text-center" id="heading">
@@ -311,38 +385,47 @@
 			</div>
 			<div class="row text-center main_content">
 				<div class="col-md-6 col-md-offset-3 text-center">
-					<form method="post" action="#">
+					<form method="post" id="formulario" action="#">
 						<div class="form">
 							<div class="input-group margin-bottom-sm">
 								<span class="input-group-addon">
 									<i class="fa fa-user fa-fw"></i>
 								</span>
-								<input class="form-control" type="text" placeholder="Nombre" required>
+								<input class="form-control" id="nombre_contacto" type="text" placeholder="Nombre"
+									required>
 							</div>
+
 							<div class="input-group margin-bottom-sm">
 								<span class="input-group-addon">
 									<i class="fa fa-envelope-o fa-fw"></i>
 								</span>
-								<input class="form-control" type="text" placeholder="Mail" required>
+								<input class="form-control" id="mail_contacto" type="text" placeholder="Mail" required>
 							</div>
+
 							<div class="input-group margin-bottom-sm">
 								<span class="input-group-addon">
 									<i class="fa fa-tags fa-fw"></i>
 								</span>
-								<input class="form-control" type="text" placeholder="Asunto">
+								<input class="form-control" id="asunto_contacto" type="text" placeholder="Asunto">
 							</div>
+
 						</div>
 						<div class="input-group margin-bottom-sm">
 							<span class="input-group-addon">
 								<i class="fa fa-comment-o fa-fw"></i>
 							</span>
-							<textarea class="form-control" rows="6" type="text" placeholder="Escribe tu mensaje"
-								required></textarea>
+							<textarea class="form-control" id="texto_contacto" rows="6" type="text"
+								placeholder="Escribe tu mensaje" required></textarea>
 						</div>
+
 						<input class="btn btn-primary send" type="submit" value="Enviar!">
 					</form>
+
 				</div>
+
 			</div>
+			<div class="info"></div>
+			<div class="mensaje_campo"></div>
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3 text-center">
 					<ul class="socials-icons">
