@@ -120,6 +120,7 @@ fetch('./cursos.json')
         cursosCarrito.push(curso)
         localStorage.setItem('cursosCarrito', JSON.stringify(cursosCarrito))
         swal("Agregaste el curso", "Exitos en tu nuevo curso", "success");
+        limpiarHTML()
         mostrarCarrito()
        }
        else{
@@ -142,17 +143,16 @@ fetch('./cursos.json')
     }
       )
     }
-   // Eliminar productos del carrito
 
-   //Mostrar los productos en el carrito
+   // Eliminar productos del carrito
+   //boton para eliminar carrito
 const carrito = document.querySelector("#carrito");
 carrito.addEventListener("click", (e=>{
   e.preventDefault()
-  console.log(e.target.getAttribute("id"))
   eliminarCurso(e.target.getAttribute("id"))}));
 
 
-
+//eliminar producto de carrito
 function eliminarCurso(e) {
   swal({
     title: "Estas seguro que desea eliminar el curso del carrito?",
@@ -172,11 +172,6 @@ function eliminarCurso(e) {
         console.log(cursosCarrito)
         limpiarHTML()
         mostrarCarrito()
-
-        
-       }
-       else{
-       
        }
       swal("Curso eliminado del carrito", {
         icon: "success",
@@ -185,25 +180,9 @@ function eliminarCurso(e) {
       swal("Tu curso sigue dentro del carrito");
     }
   });
-  const enCarrito = cursosCarrito.find(cur=>cur.id==e)
-       if(enCarrito){
-        console.log(enCarrito)
-        cursosCarrito= cursosCarrito.filter(cur => cur != enCarrito);
-        console.log(cursosCarrito)
-        limpiarHTML()
-        mostrarCarrito()
-        /* cursosCarrito.push(curso)
-        localStorage.setItem('cursosCarrito', JSON.stringify(cursosCarrito))
-        swal("Agregaste el curso", "Exitos en tu nuevo curso", "success"); */
-        
-       }
-       else{
-        //mostrar menjase de que ya tiene agregado ese curso
-        swal("", "No se puede agregar dos veces el mismo curso", "error");
-       }
-
-
   }
+
+  //limpia el html para poder imprimir bien el carrito
   function limpiarHTML() {
     carrito.innerHTML = "";
   } 
